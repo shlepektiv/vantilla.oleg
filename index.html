@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван - @vantilla</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+
+        .swiper-container {
+            max-width: 500px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev,
+        .custom-next-btn,
+        .custom-prev-btn {
+            color: #3498db;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        .custom-next-btn {
+            right: 460px; /* Расстояние 450px + 10px отступ от правого края */
+        }
+
+        .custom-prev-btn {
+            left: 460px; /* Расстояние 450px + 10px отступ от левого края */
+        }
+
+        #imageModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .gallery-image {
+            max-width: 400px;
+            max-height: 400px;
+            cursor: pointer;
+        }
+
+        #openedImage {
+            max-width: 400px;
+            max-height: 400зч;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                 
+
+             
+                <div class="swiper-slide"><img src="photo_2024-01-24_20-01-02.jpg" alt="Фото блогера 1"></div>
+                <div class="swiper-slide"><img src="photo_2024-02-12_09-47-12.jpg" alt="Фото блогера 2"></div>
+                <div class="swiper-slide"><img src="photo_2024-02-12_09-55-07.jpg" alt="Фото блогера 2"></div>
+                <div class="swiper-slide"><img src="Снимок экрана 2024-02-12 095913.png" alt="Фото блогера 2"></div>
+                <!-- Добавьте другие фотографии блогера как дополнительные слайды -->
+            </div>
+            <!-- Стрелки прокрутки по бокам картинки -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Дополнительные кнопки прокрутки -->
+        </div>
+
+        <h1>Иван (@vantilla)</h1>
+
+        <p>Следите за мной в социальных сетях:</p>
+
+        <ul>
+            <li><a href="https://t.me/vantillaa" target=»_blank»>Телеграм</a></li>
+            <li><a href="https://www.instagram.com/vantillaa?igsh=Y2tobTZsbm9jZ2g3&utm_source=qr" target=»_blank»>Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@vantilla" target=»_blank»>Тик Ток</a></li>
+            <!-- Добавьте другие социальные сети по необходимости -->
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Дополнительные кнопки прокрутки
+        document.querySelector('.custom-next-btn').addEventListener('click', function() {
+            swiper.slideNext();
+        });
+
+        document.querySelector('.custom-prev-btn').addEventListener('click', function() {
+            swiper.slidePrev();
+        });
+
+
+    </script>
+</body>
+</html>
